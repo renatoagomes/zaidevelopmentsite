@@ -312,7 +312,7 @@ function Footer({ locale }) {
           onClick={scrollToContact}
           className="font-mono text-sm text-zinc-400 transition hover:text-accent"
         >
-          renato@zaidevelopment.com
+          hello@zaidevelopment.com
         </a>
       </div>
     </footer>
