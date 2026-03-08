@@ -1,0 +1,35 @@
+Você é um desenvolvedor Frontend Senior focado em Performance e Design Moderno.
+Sua missão é criar o MVP da Landing Page da agência "ZAI Development".
+
+# ESTRUTURA DO PROJETO E STACK
+- O site PRECISA ser 100% estático para hospedar gratuitamente no Cloudflare Pages ou S3 sem back-end rodando.
+- Stack: Vite + Vanilla HTML + TailwindCSS (ou React/Vue caso julgue mais rápido para exportar estático depois via `npm run build`).
+- Inicialize o projeto Vite no diretório atual (se estiver vazio) ou crie um subdiretório `website`.
+
+# DESIGN & VIBE
+- Estilo: "Dark Mode", minimalista, tipografia robusta (ex: Inter, Roboto Mono). Fundo escuro (Zinc 900 ou Black), texto claro, contrastes precisos (ex: Emerald 500 ou Blue 600 como sotaque).
+- Deve parecer muito rápido, tecnológico, focado em engenharia de software de alto impacto. Sem firulas desnecessárias, apenas conversão B2B direta.
+
+# SEÇÕES DA SINGLE PAGE
+1. **Header:** 
+   - Logo simples em texto: `ZAI Development`
+   - Link de CTA: "Fale com a gente" apontando para `mailto:renato@zaidevelopment.com`
+2. **Hero Section:** 
+   - Headline: "Software Engineering for High-Impact Businesses" (ou algo forte em PT-BR: Engenharia de Software de Alto Impacto).
+   - Sub-headline: "Desenvolvimento sob medida, arquitetura escalável e automação inteligente para acelerar a sua operação."
+   - CTA Principal: Botão "Iniciar Projeto" apontando para o e-mail.
+3. **Serviços / O que fazemos:**
+   - *Desenvolvimento Customizado:* MVPs rápidos, Web Apps e Mobile focados em resultado.
+   - *Consultoria & Arquitetura:* Design de sistemas escaláveis, Cloud (GCP/AWS) e modernização.
+   - *Agentes de IA & Automação:* Integração com LLMs, chatbots inteligentes e fluxos de dados automatizados.
+4. **Footer:**
+   - Copyright © ZAI Development
+   - Contato: renato@zaidevelopment.com
+
+# INSTRUÇÕES DE EXECUÇÃO
+1. Crie o scaffolding (Vite + Tailwind).
+2. Construa e estilize as seções acima com um visual premium B2B.
+3. No `package.json`, modifique o script de dev para rodar na porta 5180 com host liberado: `"dev": "vite --port 5180 --host"`.
+4. Após terminar o código, deixe o servidor rodando em background (ou não bloqueie o terminal se possível, apenas crie o projeto e me avise quando terminar).
+
+Não me pergunte permissão para os passos técnicos básicos, apenas execute o setup, crie a página e entregue o site funcionando!
