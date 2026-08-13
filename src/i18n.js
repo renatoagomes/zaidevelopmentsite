@@ -3,10 +3,10 @@ const translations = {
     label: "PT",
     header: { cta: "Fale com a gente" },
     hero: {
-      tag: "Engineering-First Agency",
-      headline1: "Engenharia de Software",
-      headline2: "de Alto Impacto",
-      sub: "Desenvolvimento sob medida, arquitetura escalável e automação inteligente para acelerar a sua operação.",
+      tag: "AI-First Infrastructure & Agents",
+      headline1: "Inteligência Artificial",
+      headline2: "Aplicada ao seu Negócio",
+      sub: "Desenvolvemos infraestrutura de IA, sistemas autônomos e fluxos de trabalho agentic para escalar operações de ponta a ponta.",
       cta: "Iniciar Projeto",
     },
     services: {
@@ -14,19 +14,19 @@ const translations = {
       title: "O que fazemos",
       items: [
         {
-          title: "Desenvolvimento Customizado",
+          title: "Agentes Autônomos (Agentic Workflows)",
           description:
-            "MVPs rápidos, Web Apps e Mobile focados em resultado. Do conceito à produção com velocidade e qualidade.",
+            "Agentes de IA que executam processos de ponta a ponta: decidem, agem e escalam sua operação sem intervenção humana.",
         },
         {
-          title: "Consultoria & Arquitetura",
+          title: "Infraestrutura Cloud & IA",
           description:
-            "Design de sistemas escaláveis, Cloud (GCP/AWS) e modernização de plataformas legadas.",
+            "Arquitetura cloud-native (GCP/AWS) projetada para cargas de IA: escalável, observável e pronta para produção.",
         },
         {
-          title: "Agentes de IA & Automação",
+          title: "LLM Integrations & RAG",
           description:
-            "Integração com LLMs, chatbots inteligentes e fluxos de dados automatizados para escalar operações.",
+            "Integração de LLMs aos seus dados com pipelines de RAG: respostas precisas, contextuais e com conhecimento do seu negócio.",
         },
       ],
     },
@@ -52,10 +52,10 @@ const translations = {
     label: "EN",
     header: { cta: "Get in touch" },
     hero: {
-      tag: "Engineering-First Agency",
-      headline1: "Software Engineering",
-      headline2: "for High-Impact Businesses",
-      sub: "Custom development, scalable architecture and intelligent automation to accelerate your operations.",
+      tag: "AI-First Infrastructure & Agents",
+      headline1: "Artificial Intelligence",
+      headline2: "Applied to Your Business",
+      sub: "We build AI infrastructure, autonomous systems and agentic workflows to scale operations end to end.",
       cta: "Start a Project",
     },
     services: {
@@ -63,19 +63,19 @@ const translations = {
       title: "What we do",
       items: [
         {
-          title: "Custom Development",
+          title: "Autonomous Agents (Agentic Workflows)",
           description:
-            "Fast MVPs, Web Apps and Mobile focused on results. From concept to production with speed and quality.",
+            "AI agents that run processes end to end: they decide, act and scale your operations without human intervention.",
         },
         {
-          title: "Consulting & Architecture",
+          title: "Cloud & AI Infrastructure",
           description:
-            "Scalable system design, Cloud (GCP/AWS) and legacy platform modernization.",
+            "Cloud-native architecture (GCP/AWS) designed for AI workloads: scalable, observable and production-ready.",
         },
         {
-          title: "AI Agents & Automation",
+          title: "LLM Integrations & RAG",
           description:
-            "LLM integrations, intelligent chatbots and automated data workflows to scale operations.",
+            "LLMs integrated with your data through RAG pipelines: precise, contextual answers grounded in your business knowledge.",
         },
       ],
     },
@@ -101,10 +101,10 @@ const translations = {
     label: "ES",
     header: { cta: "Contáctenos" },
     hero: {
-      tag: "Engineering-First Agency",
-      headline1: "Ingeniería de Software",
-      headline2: "de Alto Impacto",
-      sub: "Desarrollo a medida, arquitectura escalable y automatización inteligente para acelerar tu operación.",
+      tag: "AI-First Infrastructure & Agents",
+      headline1: "Inteligencia Artificial",
+      headline2: "Aplicada a tu Negocio",
+      sub: "Desarrollamos infraestructura de IA, sistemas autónomos y flujos de trabajo agentic para escalar operaciones de punta a punta.",
       cta: "Iniciar Proyecto",
     },
     services: {
@@ -112,19 +112,19 @@ const translations = {
       title: "Lo que hacemos",
       items: [
         {
-          title: "Desarrollo Personalizado",
+          title: "Agentes Autónomos (Agentic Workflows)",
           description:
-            "MVPs rápidos, Web Apps y Mobile enfocados en resultados. Del concepto a producción con velocidad y calidad.",
+            "Agentes de IA que ejecutan procesos de punta a punta: deciden, actúan y escalan tu operación sin intervención humana.",
         },
         {
-          title: "Consultoría & Arquitectura",
+          title: "Infraestructura Cloud & IA",
           description:
-            "Diseño de sistemas escalables, Cloud (GCP/AWS) y modernización de plataformas heredadas.",
+            "Arquitectura cloud-native (GCP/AWS) diseñada para cargas de IA: escalable, observable y lista para producción.",
         },
         {
-          title: "Agentes de IA & Automatización",
+          title: "LLM Integrations & RAG",
           description:
-            "Integración con LLMs, chatbots inteligentes y flujos de datos automatizados para escalar operaciones.",
+            "Integración de LLMs con tus datos mediante pipelines de RAG: respuestas precisas, contextuales y con conocimiento de tu negocio.",
         },
       ],
     },
