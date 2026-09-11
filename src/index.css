@@ -1,18 +1,189 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-mono: "Roboto Mono", monospace;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "Roboto Mono", ui-monospace, monospace;
+
   --color-accent: #10b981;
-  --color-accent-hover: #059669;
+  --color-accent-hover: #34d399;
+  --color-cyan: #22d3ee;
+
+  --color-ink: #05070a;
+  --color-surface: #0a0d12;
+  --color-hairline: #1a1f27;
 }
 
-html {
-  scroll-behavior: smooth;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "ss01";
+    background-color: var(--color-ink);
+    color: #fafafa;
+  }
+
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
 }
 
-body {
-  font-family: var(--font-sans);
-  background-color: #09090b;
-  color: #fafafa;
+@layer utilities {
+  /* Hairline grid used behind the hero and the case study panel. */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+
+  /* Translucent card: blurred backdrop + a lit top edge for the glass rim. */
+  .glass {
+    background: linear-gradient(
+      160deg,
+      rgba(255, 255, 255, 0.055) 0%,
+      rgba(255, 255, 255, 0.018) 45%,
+      rgba(255, 255, 255, 0.008) 100%
+    );
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    box-shadow:
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.07),
+      0 20px 50px -24px rgba(0, 0, 0, 0.9);
+  }
+
+  .glass-hover {
+    transition:
+      border-color 0.4s ease,
+      box-shadow 0.4s ease,
+      transform 0.4s ease;
+  }
+
+  .glass-hover:hover {
+    border-color: color-mix(in srgb, var(--color-accent) 32%, transparent);
+    box-shadow:
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.1),
+      0 0 0 1px color-mix(in srgb, var(--color-accent) 10%, transparent),
+      0 24px 60px -26px color-mix(in srgb, var(--color-accent) 40%, transparent);
+    transform: translateY(-2px);
+  }
+
+  /* Neon emerald→cyan hairline, used as a lit rim on panels. */
+  .rim-glow::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      color-mix(in srgb, var(--color-accent) 70%, transparent) 30%,
+      color-mix(in srgb, var(--color-cyan) 70%, transparent) 70%,
+      transparent
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+
+  .rim-glow:hover::before,
+  .rim-glow.is-lit::before {
+    opacity: 1;
+  }
+
+  .text-gradient {
+    background: linear-gradient(100deg, #34d399 0%, #22d3ee 55%, #67e8f9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Reveal-on-scroll: elements start shifted, .is-visible settles them. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Comet of light travelling an edge. Paths carry pathLength="100",
+     so the same keyframes work for every curve regardless of length. */
+  .edge-pulse {
+    stroke-dasharray: 12 200;
+    animation: edge-pulse 0.95s cubic-bezier(0.45, 0, 0.55, 1) forwards;
+  }
+
+  @keyframes edge-pulse {
+    from {
+      stroke-dashoffset: 12;
+      opacity: 0;
+    }
+    12% {
+      opacity: 1;
+    }
+    88% {
+      opacity: 1;
+    }
+    to {
+      stroke-dashoffset: -100;
+      opacity: 0;
+    }
+  }
+
+  /* Slow drift for the hero creative, so it never sits perfectly still. */
+  @keyframes float-slow {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-14px);
+    }
+  }
+
+  .animate-float-slow {
+    animation: float-slow 9s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    .animate-float-slow {
+      animation: none;
+    }
+
+    .edge-pulse {
+      animation: none;
+      opacity: 0.9;
+      stroke-dasharray: none;
+    }
+
+    html {
+      scroll-behavior: auto;
+    }
+  }
 }
